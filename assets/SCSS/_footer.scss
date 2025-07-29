@@ -1,0 +1,157 @@
+// Variables
+$bg-color: #10151c;
+$text-color: #fff;
+$text-muted: #ccc;
+$accent-color: #e74c3c;
+$border-color: #333;
+$border-light: #222;
+$font-family: Arial, sans-serif;
+
+footer {
+  background-color: $bg-color;
+  padding: 20px 50px;
+  color: $text-color;
+
+  /* Newsletter */
+  .newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    p {
+      font-size: 16px;
+    }
+
+    button {
+      background-color: $accent-color;
+      color: $text-color;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+
+      &:hover {
+        background-color: darken($accent-color, 10%);
+      }
+    }
+  }
+
+  hr {
+    border: 0.5px solid $border-color;
+    margin: 20px 0;
+  }
+
+  /* Footer Content */
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+
+    .footer-logo {
+      p {
+        font-size: 14px;
+        color: $text-muted;
+        max-width: 250px;
+      }
+
+      .social-icons {
+        a {
+          color: $text-color;
+          margin: 10px 10px 0 0;
+          font-size: 20px;
+          transition: color 0.3s;
+
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+    }
+
+    .footer-links,
+    .footer-company {
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin: 8px 0;
+          color: $text-muted;
+          font-size: 14px;
+          cursor: pointer;
+
+          &:hover {
+            color: $text-color;
+          }
+        }
+      }
+    }
+  }
+
+  /* Footer Bottom */
+  .footer-bottom {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-top: 1px solid $border-light;
+    padding-top: 20px;
+
+    .top-cities {
+      flex: 1;
+
+      span {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      .city-buttons {
+        button {
+          background-color: transparent;
+          border: 1px solid $border-color;
+          color: $text-color;
+          padding: 6px 14px;
+          margin: 5px 5px 0 0;
+          border-radius: 20px;
+          cursor: pointer;
+          font-size: 14px;
+          transition: background 0.3s;
+
+          &:hover {
+            background-color: $border-color;
+          }
+        }
+      }
+    }
+
+    .footer-credits {
+      text-align: right;
+      flex: 1;
+
+      p {
+        font-size: 14px;
+        color: $text-muted;
+        margin-bottom: 10px;
+
+        span {
+          font-weight: bold;
+          color: $text-color;
+        }
+      }
+
+      .payment-icons {
+        img {
+          width: 35px;
+          margin-left: 12px;
+          vertical-align: middle;
+          filter: brightness(0) invert(1); // Makes icons white for dark theme
+        }
+      }
+    }
+  }
+}

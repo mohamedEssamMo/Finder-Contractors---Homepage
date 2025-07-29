@@ -1,0 +1,130 @@
+.grow{
+  background-color: #3D7A81;
+  margin-bottom: 100px;
+  .container{
+    display: flex;
+    align-items: center;
+    div.info{
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: 50px 80px;
+      position: relative;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      h2{
+        font-size: 1.8rem;
+        color: var(--main-color);
+        @media (max-width: 992px) {
+          font-size: 1.5rem;
+        }
+      }
+      .buttons{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            width: 100%;
+            align-items: flex-start;
+          }
+        button{
+          padding: 15px;
+          border-radius: 10px;
+          border: 1px solid transparent;
+          font-weight: 600;
+          color: var(--main-color);
+          @media (max-width: 992px) and (min-width: 768px) {
+            font-size: .8rem;
+          }
+        }
+        .add{
+          background-color:#C92D2D;
+          &:hover{
+            background-color: #c42020;
+          }
+          span{
+            font-size: 1.1rem;
+          }
+        }
+        .more{
+          background-color: transparent;
+          border-color:var(--main-color);
+          padding-right: 30px;
+          position: relative;
+          &::after{
+          font-family: var(--fa-style-family-classic);
+          content: "\f107";
+          font-weight: 900;
+          font-size: 1rem;
+          position: absolute;
+          right: 10px;
+          }
+          &:hover{
+            background-color: var(--main-color);
+            color: var(--secondary-color);  
+          }
+        }
+      }
+    }
+    img {
+      width: 50%;
+      height: 100%;
+      @media (max-width: 768px) {
+        display: none;
+      }
+      
+    }
+  }
+}
+
+.circle-wrapper {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  right: -180px;
+  animation: rotate 10s linear infinite;
+  z-index: 5;
+  @media (max-width: 768px) {
+    display: none;
+  }
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    circle {
+      fill: none;
+      stroke: white;
+      stroke-width: 2;
+    }
+
+    text {
+      font-size: 12px;
+      fill: white;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+.center-dot {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #d85f5f;
+  border-radius: 50%;
+  right: -95px;
+  z-index: 5;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
